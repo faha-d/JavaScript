@@ -8,17 +8,17 @@ console.log(typeof convertedScore); // Output: "number"
 // Convert number to string
 const someNumber = 69;
 const stringNumber = String(someNumber);
-console.log(stringNumber, typeof stringNumber); // Output: "string"
+console.log(stringNumber, typeof stringNumber); // Output: "69 and string"
 
 // Convert string with non-numeric characters to number
 const char = "fahad123";
 const convertedChar = Number(char);
-console.log(typeof convertedChar, convertedChar); // Output: "NaN"
+console.log(typeof convertedChar, convertedChar); // Output: "number" and "NaN"
 
 // Convert null to number
 const nullValue = null;
 const convertedNullValue = Number(nullValue);
-console.log(typeof convertedNullValue, convertedNullValue || 0); // Output: "NaN or 0"
+console.log(typeof convertedNullValue, convertedNullValue || 0); // Output: "number and 0 or NaN"
 
 // Convert boolean to number
 const booleanValue = true;
