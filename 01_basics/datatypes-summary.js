@@ -1,58 +1,57 @@
-// Primitive DataTypes
+// Stack is used for static memory allocation, storing primitive data types, and managing function calls.
 
-// 7 Types: String, Number, Boolean, null, undefined, Symbol, BigInt
+// Heap is used for dynamic memory allocation, storing non-primitive data types like objects and arrays.
 
-const score = 100;
-const anotherScore = 10.3;
+const score = 100; // Stored in Stack
+const anotherScore = 10.3; // Stored in Stack
 
-const isLoggedIn = false;
-const outsideTemp = null;
+const isLoggedIn = false; // Stored in Stack
+const outsideTemp = null; // Stored in Stack
 
-let userName;
+let userName; // Stored in Stack
 
-const id = Symbol("123");
-const anotherId = Symbol("123");
+const id = Symbol("123"); // Stored in Stack
+const anotherId = Symbol("123"); // Stored in Stack
 console.log(id === anotherId); // Output: false
 
-const bigNumber = 6565656565656565445n;
+const bigNumber = 6565656565656565445n; // Stored in Stack
 
 // Non-Primitive DataTypes / Reference Type
-
-// Array, Objects, Functions
-
-const heroes = ["ironman", "spiderman", "blackpanther"];
+const heroes = ["ironman", "spiderman", "blackpanther"]; // Stored in Heap
 
 const data = {
+  // Stored in Heap
   name: "Fahad",
   age: 19,
   state: "Karachi",
 };
 
 const myFunc = () => {
+  // Stored in Heap
   console.log("This is my function");
 };
 myFunc();
 
-console.log(typeof myFunc);
+console.log(typeof myFunc); // Output: function
 
-// Memory In JS
+// Stack memory demonstration
+let channelName = "codesfahad"; // Stored in Stack
+let anotherName = channelName; // Stored in Stack
 
-// Stack(Primitive Datatypes), Heap(Non-Primitive DataTypes)
+anotherName = "fahadcodes"; // Stored in Stack
 
-let channelName = "codesfahad";
-let anotherName = channelName;
+console.log(anotherName); // Output: fahadcodes
+console.log(channelName); // Output: codesfahad
 
-anotherName = "fahadcodes";
-
-console.log(anotherName);
-console.log(channelName);
-
+// Heap memory demonstration
 let userInfo = {
+  // Stored in Heap
   name: "Fehdi",
   email: "fahadcodes@google.com",
 };
 
 let anotherUser = userInfo; // Both objects share the same reference
-anotherUser.email = "codesfahad@google.com";
-console.log(userInfo);
-console.log(anotherUser);
+anotherUser.email = "codesfahad@google.com"; // Modifying shared object
+
+console.log(userInfo); // Output: { name: 'Fehdi', email: 'codesfahad@google.com' }
+console.log(anotherUser); // Output: { name: 'Fehdi', email: 'codesfahad@google.com' }
