@@ -63,7 +63,7 @@ console.log(1 + 2 + "2"); // Output: "32"
 console.log(((3 + 4) * 5) % 3); // Output: 2 not recommended to do such types of expressions.
 
 // Unary plus operation on boolean and empty string
-console.log(+true); // Output: 1
+console.log(+true); // Output: 1 // check the possibility if value can be converted into a number.
 console.log(+ ""); // Output: 0
 
 // Incrementing a variable
