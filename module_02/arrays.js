@@ -31,10 +31,45 @@ const newArr = heroNames.join(",");
 console.log(newArr);
 
 // Create a shallow copy of heroNames array from index 0 to 3 (exclusive)
-const sliceArr = heroNames.slice(0, 3); 
+const sliceArr = heroNames.slice(0, 3);
 console.log(sliceArr);
 
 // Remove 2 elements from heroNames starting at index 0 (modifies original array)
-const spliceArr = heroNames.splice(0, 2); 
+const spliceArr = heroNames.splice(0, 2);
 console.log(spliceArr);
 console.log(heroNames);
+
+const marvelHeros = ["Doctor Strange", "Vision", "Loki"];
+const dcHeros = ["SuperMan", "BatMan", "Flash"];
+
+// Combine marvelHeros and dcHeros arrays using concat method
+const allHeros = marvelHeros.concat(dcHeros);
+console.log(allHeros);
+
+// Combine marvelHeros and dcHeros arrays using spread operator
+const allNewHeros = [...marvelHeros, ...dcHeros];
+console.log(allNewHeros);
+
+const anotherArr = [1, 2, 3, [4, 5, 6], 7, 8, [9, 10]];
+// Flatten the array by one level
+const numArr = anotherArr.flat(1);
+console.log(numArr);
+
+let str = "Hey Doc";
+// Create an array from a string
+console.log(Array.from(str));
+// Check if str is an array
+console.log(Array.isArray(str));
+// Create an array from an object (interesting example)
+console.log(Array.from({ name: "John" }));
+
+let score1 = 100;
+let score2 = 200;
+let score3 = 300;
+// Create an array from individual values
+console.log(Array.of(score1, score2, score3));
+
+// Map over marvelHeros array and log hero name with its index
+marvelHeros.map((hero, position) => {
+  console.log("Hero Name:", hero, "Index:", position);
+});
