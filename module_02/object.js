@@ -89,4 +89,20 @@ users.map((users) => {
 console.log(Object.keys(snapChatUser));
 console.log(Object.values(snapChatUser));
 console.log(Object.entries(snapChatUser)); // Giving in the array form.
-console.log(snapChatUser.hasOwnProperty('isLoggedIn'))
+console.log(snapChatUser.hasOwnProperty("isLoggedIn"));
+
+// Object Destructuring
+const course = {
+  courseName: "DSA",
+  courseFee: 999,
+  courseInstructor: "Sir Fahad",
+};
+// console.log(course.courseFee)
+
+const {courseFee, courseInstructor: instructor, courseName} = course;
+console.log(instructor);
+
+
+
+
+
